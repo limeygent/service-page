@@ -837,7 +837,7 @@ Define these in your project CSS:
 
 ## Complete Page Structure Example
 
-See `references/examples/` for full page implementations. Basic structure:
+See `references/examples/README.md` for the HTML page skeleton. Basic structure:
 
 ```yaml
 page:
@@ -872,4 +872,4 @@ page:
     # ... additional rows
 ```
 
-This is the core layout methodology. For specific block content models and conditional logic, see block-catalog.md. For complete examples, see references/examples/.
+This is the core layout methodology. For specific block content models and conditional logic, see block-catalog.md. For the HTML page skeleton template, see references/examples/README.md.

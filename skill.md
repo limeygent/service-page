@@ -275,6 +275,6 @@ Load these as needed during execution:
 - **niche-adaptations.md** - Industry-specific requirements
 - **references/emergency-page-patterns.md** - 🚨 Emergency service page architecture (MUST READ for urgency='emergency')
 
-## Examples
+## HTML Skeleton
 
-See references/examples/ for complete page generations across different niches and urgency levels.
+See references/examples/README.md for the HTML page skeleton template (DOCTYPE, CDN links, CSS variables, JSON-LD placement, sticky CTA pattern).
