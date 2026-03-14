@@ -1,0 +1,62 @@
+{
+  "skill_name": "service-page-builder",
+  "evals": [
+    {
+      "id": 1,
+      "name": "emergency-plumbing-austin",
+      "prompt": "I need a service page for my plumbing company, Lone Star Plumbing in Austin TX. We do emergency burst pipe repair, 24/7 service, licensed and insured since 2008. Texas Master Plumber License #M-42198. Average response time 45 minutes. We have 4.8 stars from 312 Google reviews. Phone is (512) 555-0147.",
+      "expected_output": "Bootstrap 5 HTML emergency service page with safety notice in rows 2-3, reviews carousel, symptom matrix, pricing table, progressive CTAs, local Austin references, FAQ with JSON-LD schema",
+      "files": [],
+      "assertions": [
+        {"name": "has_safety_notice_early", "type": "position", "description": "SAFETY_NOTICE appears before any educational content (within first 3 sections)"},
+        {"name": "has_reviews_carousel", "type": "presence", "description": "Page includes a reviews carousel with 4+ testimonials, not just a single quote"},
+        {"name": "progressive_ctas", "type": "uniqueness", "description": "No two CTAs on the page use identical text"},
+        {"name": "no_em_dashes", "type": "absence", "description": "Zero em-dash characters in the output"},
+        {"name": "local_references", "type": "count", "description": "At least 2 specific Austin local references (neighborhoods, landmarks, climate factors)"},
+        {"name": "bootstrap5_grid", "type": "presence", "description": "Uses Bootstrap 5 grid classes (col-*, row, container)"},
+        {"name": "faq_schema", "type": "presence", "description": "FAQPage JSON-LD structured data present"},
+        {"name": "anti_slop_clean", "type": "absence", "description": "No banned vague adjectives without evidence (best, quality, professional, experienced, trusted, expert, state-of-the-art, premier, comprehensive)"},
+        {"name": "sticky_mobile_cta", "type": "presence", "description": "Sticky mobile CTA with call/text buttons for emergency page"},
+        {"name": "pricing_transparency", "type": "presence", "description": "Pricing table with specific dollar ranges, not just 'competitive pricing'"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "cosmetic-veneers-sydney-ahpra",
+      "prompt": "Build a service page for cosmetic veneers at a dental practice called Harbour Dental in Sydney, Australia. Dr. Lisa Nguyen is a general dentist with a focus on cosmetic procedures, 15 years experience, AHPRA registration DEN0001847293. This is AHPRA-regulated. Phone (02) 9555 1234. Located at 42 Harbour St, Sydney NSW 2000. They have 4.9 stars from 156 Google reviews.",
+      "expected_output": "Bootstrap 5 HTML service page for cosmetic veneers, AHPRA-compliant (no forbidden words), research/planning intent, detailed process timeline, pricing with ranges, FAQ, proper practitioner title (General Dentist not Cosmetic Dentist)",
+      "files": [],
+      "assertions": [
+        {"name": "ahpra_no_forbidden_titles", "type": "absence", "description": "Does NOT use 'Cosmetic Dentist' as a title (AHPRA restricted). Uses 'General Dentist with a focus on cosmetic procedures' or similar"},
+        {"name": "ahpra_no_forbidden_words", "type": "absence", "description": "Does NOT contain words: specialist, expert, expertise, perfect, guarantee, painless, pain-free"},
+        {"name": "ahpra_registration_visible", "type": "presence", "description": "AHPRA registration number DEN0001847293 is displayed on the page"},
+        {"name": "veneer_irreversibility_warning", "type": "presence", "description": "Includes a warning that veneers are irreversible (tooth preparation cannot be undone)"},
+        {"name": "no_em_dashes", "type": "absence", "description": "Zero em-dash characters in the output"},
+        {"name": "progressive_ctas", "type": "uniqueness", "description": "No two CTAs on the page use identical text"},
+        {"name": "bootstrap5_grid", "type": "presence", "description": "Uses Bootstrap 5 grid classes"},
+        {"name": "process_timeline", "type": "presence", "description": "Detailed step-by-step process timeline for veneer procedure"},
+        {"name": "planning_intent_tone", "type": "quality", "description": "Educational, no-pressure tone appropriate for research/planning intent (no aggressive urgency)"},
+        {"name": "no_warranty_guarantee", "type": "absence", "description": "Does NOT guarantee clinical outcomes or offer warranties on veneers (AHPRA prohibited)"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "recurring-lawn-care-charlotte",
+      "prompt": "Create a service page for GreenEdge Lawn Care in Charlotte, NC. Weekly lawn mowing and seasonal treatments. Family-owned since 2015, 4.7 stars from 85 Google reviews. Phone (704) 555-0823. They serve South Charlotte, Ballantyne, Myers Park, and Dilworth neighborhoods. Plans start at $35/week for standard mowing.",
+      "expected_output": "Bootstrap 5 HTML service page for recurring lawn care, planning intent, subscription/plan pricing emphasis, local Charlotte references, warm family-business tone, no emergency urgency",
+      "files": [],
+      "assertions": [
+        {"name": "recurring_pricing", "type": "presence", "description": "Pricing emphasizes recurring plans/subscriptions (weekly, monthly) rather than one-time service"},
+        {"name": "no_emergency_urgency", "type": "absence", "description": "No emergency language, safety notices, or aggressive urgency CTAs"},
+        {"name": "local_references", "type": "count", "description": "At least 2 specific Charlotte references (neighborhoods like Ballantyne, Myers Park provided in prompt)"},
+        {"name": "no_em_dashes", "type": "absence", "description": "Zero em-dash characters in the output"},
+        {"name": "progressive_ctas", "type": "uniqueness", "description": "No two CTAs on the page use identical text"},
+        {"name": "bootstrap5_grid", "type": "presence", "description": "Uses Bootstrap 5 grid classes"},
+        {"name": "planning_tone", "type": "quality", "description": "Warm, no-pressure tone appropriate for planning/research intent"},
+        {"name": "anti_slop_clean", "type": "absence", "description": "No banned vague adjectives without evidence"},
+        {"name": "consistency_messaging", "type": "presence", "description": "Messaging about consistency, reliability, ongoing service (recurring service pattern)"},
+        {"name": "faq_present", "type": "presence", "description": "FAQ section addressing common lawn care questions"}
+      ]
+    }
+  ]
+}

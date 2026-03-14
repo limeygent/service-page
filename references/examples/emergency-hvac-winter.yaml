@@ -1,0 +1,723 @@
+# Complete Service Page Example: Emergency HVAC Heater Repair
+# Scenario: Winter emergency, no heat, McKinney TX
+# Niche: HVAC | Intent: fix_now | Urgency: emergency
+
+page:
+  meta:
+    title: "Emergency Heater Repair McKinney TX | ABC Heating & Air"
+    description: "24/7 emergency heater repair in McKinney. Licensed HVAC technicians. Same-day service. Call now for fast, professional heating repair."
+    niche: hvac
+    intent_primary: fix_now
+    urgency: emergency
+    season: winter
+    outage_severity: no_heat
+    safety_hazard_possible: true
+    location:
+      city: McKinney
+      state: TX
+      region: Dallas-Fort Worth
+    business:
+      name: ABC Heating & Air
+      founded_year: 1987
+      phone: "(972) 555-1234"
+      license: "TACLB00024715E"
+
+  rows:
+    # ROW 1: HERO with SHORT_FORM
+    - id: hero
+      container: standard
+      layout: asymmetric
+      classes: ["py-5", "bg-light"]
+      blocks:
+        - type: HERO
+          column: {xs: 12, lg: 7}
+          order: {xs: 1, lg: 1}
+          content:
+            heading: "Emergency Heater Repair in McKinney, TX"
+            subhead: "Licensed HVAC technicians serving North Texas since 1987"
+            explanation_text: |
+              When your heater fails during a North Texas winter, every minute matters.
+              Our licensed technicians carry common parts and can diagnose most issues
+              within the first visit, meaning you're back to warmth faster.
+
+            intent_mapping:
+              emotional_driver: "Fear of prolonged discomfort, family safety anxiety"
+              functional_driver: "Fast resolution, minimize downtime"
+              trust_signal: "Licensed, prepared, experienced"
+
+            badges:
+              - text: "Licensed & Insured"
+                icon: "shield-check"
+                tooltip: "TACLB00024715E"
+                classes: ["badge", "bg-primary", "p-3"]
+              - text: "Same-Day Service"
+                icon: "clock-fast"
+                classes: ["badge", "bg-primary", "p-3"]
+              - text: "24/7 Emergency"
+                icon: "telephone-fill"
+                classes: ["badge", "bg-primary", "p-3"]
+
+            ctas:
+              - text: "Call (972) 555-1234"
+                href: "tel:9725551234"
+                classes: ["btn", "btn-danger", "btn-lg"]
+                icon: "telephone-fill"
+                meclabs_role: "friction_reducer"
+              - text: "Text for Help"
+                href: "sms:9725551234"
+                classes: ["btn", "btn-outline-danger", "btn-lg"]
+                icon: "chat-dots"
+                meclabs_role: "convenience_option"
+
+            meclabs_contribution:
+              increases: ["motivation_4x", "value_prop_3x"]
+              reduces: ["friction_2x"]
+
+        - type: SHORT_FORM
+          column: {xs: 12, lg: 5}
+          order: {xs: 2, lg: 2}
+          content:
+            heading: "Get Help Now"
+            subheading: "We'll call you within 15 minutes"
+            classes_card: ["card", "shadow", "mt-4", "mt-lg-0"]
+            classes_body: ["card-body", "p-4"]
+
+            fields:
+              - name: name
+                type: text
+                label: "Your Name"
+                placeholder: "Your Name"
+                required: true
+                classes: ["form-control", "mb-3"]
+
+              - name: phone
+                type: tel
+                label: "Phone Number"
+                placeholder: "Phone Number"
+                required: true
+                pattern: "[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                classes: ["form-control", "mb-3"]
+
+            submit:
+              text: "Request Service"
+              classes: ["btn", "btn-danger", "w-100", "btn-lg"]
+
+            privacy:
+              text: "By submitting, you agree to receive calls/texts. Reply STOP to opt out."
+              classes: ["small", "text-muted", "mt-2"]
+
+            meclabs_contribution:
+              reduces: ["friction_2x"]
+
+    # ROW 2: AVAILABILITY_BADGE
+    - id: availability
+      container: fluid
+      layout: single_column
+      classes: ["py-3", "bg-info", "bg-opacity-10", "border-bottom"]
+      blocks:
+        - type: AVAILABILITY_BADGE
+          column: {xs: 12}
+          content:
+            text: "3 technicians available today in McKinney"
+            subtext: "Average arrival: 2 hours"
+            icon: "truck"
+            classes: ["text-center", "mb-0"]
+
+            meclabs_contribution:
+              increases: ["incentive_2x"]
+              reduces: ["friction_2x"]
+
+    # ROW 3: SAFETY_NOTICE
+    - id: safety
+      container: fluid
+      layout: single_column
+      classes: ["py-4", "bg-warning", "bg-opacity-10", "border-start", "border-warning", "border-5"]
+      blocks:
+        - type: SAFETY_NOTICE
+          column: {xs: 12}
+          content:
+            alert_text: "⚠️ Smell gas or see soot? Turn off system and call immediately"
+            explanation_text: |
+              Carbon monoxide is colorless and odorless. If you notice soot buildup,
+              burning smells, or your family feels lightheaded, your system may have
+              incomplete combustion: a safety hazard requiring immediate attention.
+
+            intent_mapping:
+              emotional_driver: "Fear of invisible danger, family safety"
+              functional_driver: "Know when to evacuate vs troubleshoot"
+
+            action_steps:
+              - "Turn off heating system at thermostat"
+              - "Open windows if you smell gas"
+              - "Check CO detectors are working"
+              - "Call us or 911 if anyone feels lightheaded"
+
+            classes_heading: ["h4", "mb-3", "fw-bold"]
+            classes_steps: ["mb-0"]
+
+            meclabs_contribution:
+              increases: ["motivation_4x"]
+              reduces: ["anxiety_2x"]
+
+    # ROW 4: BRANDS_SYSTEMS
+    - id: brands
+      container: standard
+      layout: single_column
+      classes: ["py-5", "border-top"]
+      blocks:
+        - type: BRANDS_SYSTEMS
+          column: {xs: 12}
+          content:
+            title: "We Repair All Major Heater Brands"
+            intro: "Our technicians are factory-trained on the systems you have"
+            brands:
+              - Carrier
+              - Trane
+              - Lennox
+              - Rheem
+              - Goodman
+              - American Standard
+              - Bryant
+              - York
+              - Ruud
+              - Amana
+
+            layout: "responsive-grid"
+            classes_container: ["row", "g-4", "justify-content-center", "mt-3"]
+            classes_logo: ["col-6", "col-md-4", "col-lg-3", "text-center"]
+
+            meclabs_contribution:
+              increases: ["value_prop_3x"]
+
+    # ROW 5: SYMPTOM_MATRIX
+    - id: symptoms
+      container: standard
+      layout: single_column
+      classes: ["py-5", "bg-light"]
+      blocks:
+        - type: SYMPTOM_MATRIX
+          column: {xs: 12}
+          content:
+            title: "What's Wrong With Your Heater?"
+            intro_text: |
+              Is your heater acting up? Here's what those strange noises, weak airflow,
+              or cycling issues usually mean, and what it typically costs to fix. Use this
+              to decide if you need emergency service or can wait until morning.
+
+            intent_mapping:
+              emotional_driver: "Uncertainty about severity, DIY capability"
+              functional_driver: "Self-diagnosis, urgency assessment, cost estimation"
+
+            symptoms:
+              - symptom: "Not blowing hot air"
+                causes: ["Pilot light out", "Thermostat issue", "Ignitor failure"]
+                price_range: "$95-350"
+                urgency: "schedule_today"
+                urgency_label: "Schedule Today"
+                urgency_color: "warning"
+                explanation: "Usually fixable within an hour. Not dangerous, but home won't warm up."
+
+              - symptom: "Strange burning smell"
+                causes: ["Dust on heat exchanger", "Overheating", "Electrical issue"]
+                price_range: "$150-500"
+                urgency: "emergency"
+                urgency_label: "Call Now"
+                urgency_color: "danger"
+                explanation: "Could indicate safety issue. Turn off and call immediately."
+
+              - symptom: "Cycling on/off frequently"
+                causes: ["Dirty filter", "Thermostat malfunction", "Limit switch"]
+                price_range: "$95-400"
+                urgency: "schedule_today"
+                urgency_label: "Schedule Today"
+                urgency_color: "warning"
+                explanation: "Reduces efficiency and increases wear. Should be addressed soon."
+
+              - symptom: "Loud banging or rattling"
+                causes: ["Loose parts", "Blower issue", "Ductwork expansion"]
+                price_range: "$150-600"
+                urgency: "soon"
+                urgency_label: "This Week"
+                urgency_color: "info"
+                explanation: "Usually mechanical, not dangerous but can worsen over time."
+
+              - symptom: "Weak airflow"
+                causes: ["Clogged filter", "Blower motor issue", "Duct blockage"]
+                price_range: "$95-500"
+                urgency: "soon"
+                urgency_label: "This Week"
+                urgency_color: "info"
+                explanation: "Reduces comfort and efficiency. Schedule service this week."
+
+              - symptom: "Yellow pilot light"
+                causes: ["Incomplete combustion", "Carbon monoxide risk"]
+                price_range: "$150-600"
+                urgency: "emergency"
+                urgency_label: "Call Now"
+                urgency_color: "danger"
+                explanation: "Pilot should be blue. Yellow indicates danger. Turn off immediately."
+
+            responsive:
+              mobile: accordion
+              tablet: card_grid
+              desktop: table
+
+            classes_table: ["table", "table-hover", "d-none", "d-lg-table"]
+            classes_accordion: ["accordion", "d-lg-none"]
+
+            meclabs_contribution:
+              increases: ["value_prop_3x"]
+              reduces: ["friction_2x", "anxiety_2x"]
+
+    # ROW 6: PATH_CHOICE
+    - id: path_choice
+      container: standard
+      layout: single_column
+      classes: ["py-5"]
+      blocks:
+        - type: PATH_CHOICE
+          column: {xs: 12}
+          content:
+            title: "Should You Repair or Replace Your Heater?"
+            intro: "We'll walk you through the math with no pressure either way"
+
+            repair:
+              title: "Repair Your Current System"
+              when:
+                - "Under 10 years old"
+                - "First major issue"
+                - "Single component failure"
+              cost: "$200-1,200 typical"
+              pros:
+                - "Lower upfront cost"
+                - "Quick fix (same day)"
+                - "Extends life 2-5 years"
+              cons:
+                - "May have future repairs"
+                - "Older efficiency standards"
+              classes_card: ["col-12", "col-lg-6"]
+
+            replace:
+              title: "Install New System"
+              when:
+                - "15+ years old"
+                - "Frequent repairs ($800+ annually)"
+                - "Energy bills increasing"
+              cost: "$3,500-7,000 typical"
+              pros:
+                - "10-15 year warranty"
+                - "Lower energy bills (20-30%)"
+                - "Modern features & reliability"
+              cons:
+                - "Higher upfront cost"
+                - "Installation time"
+              classes_card: ["col-12", "col-lg-6"]
+
+            decision_support:
+              text: "Not sure? Our tech will inspect, explain your options, and let you decide. No pressure, just honest advice."
+              classes: ["alert", "alert-info", "mt-4"]
+
+            layout_classes: ["row", "g-4"]
+
+            meclabs_contribution:
+              increases: ["value_prop_3x"]
+              reduces: ["anxiety_2x"]
+
+    # ROW 7: PRICING_TABLE
+    - id: pricing
+      container: standard
+      layout: single_column
+      classes: ["py-5", "bg-light"]
+      blocks:
+        - type: PRICING_TABLE
+          column: {xs: 12}
+          content:
+            title: "Honest, Upfront Pricing"
+            intro_text: |
+              No surprises. Every repair starts with a $89 diagnostic (waived if we do
+              the work). We show you the problem, explain your options, and only proceed
+              with your approval. If we can't fix it, you pay nothing.
+
+            intent_mapping:
+              emotional_driver: "Fear of price gouging, hidden fees"
+              functional_driver: "Budget planning, informed decisions"
+
+            diagnostic_fee:
+              amount: "$89"
+              waiver: "waived with repair"
+              explanation: "Covers inspection, diagnosis, written estimate"
+
+            common_repairs:
+              - service: "Filter replacement & tune-up"
+                price_range: "$95-150"
+                includes: "Filter, safety check, efficiency test"
+                typical_time: "45-60 minutes"
+
+              - service: "Thermostat replacement"
+                price_range: "$200-400"
+                includes: "New thermostat, programming, testing"
+                typical_time: "1-2 hours"
+
+              - service: "Ignitor replacement"
+                price_range: "$250-450"
+                includes: "New ignitor, testing, safety check"
+                typical_time: "1-2 hours"
+
+              - service: "Blower motor replacement"
+                price_range: "$500-900"
+                includes: "New motor, labor, testing"
+                typical_time: "2-3 hours"
+
+              - service: "Heat exchanger repair"
+                price_range: "$800-1,500"
+                includes: "Exchanger work or replacement, testing"
+                typical_time: "3-5 hours"
+
+              - service: "Complete system replacement"
+                price_range: "$3,500-7,000"
+                includes: "New system, installation, 10-year warranty"
+                typical_time: "1-2 days"
+
+            footer_note: |
+              Final pricing determined after diagnostic. Prices shown are typical for
+              McKinney area and include parts & labor. We'll always get your approval
+              before starting work.
+
+            classes_table: ["table", "table-striped"]
+
+            meclabs_contribution:
+              increases: ["value_prop_3x"]
+              reduces: ["friction_2x", "anxiety_2x"]
+
+    # ROW 8: PAYMENT_STRIP
+    - id: payment
+      container: standard
+      layout: single_column
+      classes: ["py-3", "border-top", "border-bottom"]
+      blocks:
+        - type: PAYMENT_STRIP
+          column: {xs: 12}
+          content:
+            title: "Flexible Payment Options"
+            accepted: ["Visa", "Mastercard", "Amex", "Discover", "Check", "Cash"]
+            financing:
+              available: true
+              terms: "0% for 12 months (OAC)"
+              link: "#financing"
+              link_text: "See terms"
+
+            display: "logo_strip"
+            classes: ["d-flex", "justify-content-center", "align-items-center", "flex-wrap", "gap-3"]
+
+            meclabs_contribution:
+              increases: ["incentive_2x"]
+              reduces: ["friction_2x"]
+
+    # ROW 9: GUARANTEE_CHIPS + PROCESS_TIMELINE
+    - id: decision_support
+      container: standard
+      layout: asymmetric
+      classes: ["py-5"]
+      blocks:
+        - type: PROCESS_TIMELINE
+          column: {xs: 12, lg: 8}
+          order: {xs: 1, lg: 1}
+          content:
+            title: "What to Expect: From Call to Fixed"
+            intro_text: |
+              From your first call to fixed and tested, here's exactly what to expect.
+              No surprises, no pressure.
+
+            intent_mapping:
+              emotional_driver: "Uncertainty about process, loss of control"
+              functional_driver: "Know what to prepare, timeline expectations"
+
+            steps:
+              - step_number: 1
+                title: "Call or Book Online"
+                description: "We'll ask about your issue and schedule a visit, often same-day"
+                icon: "telephone"
+                duration: "5 minutes"
+
+              - step_number: 2
+                title: "Diagnostic Visit"
+                description: "Licensed tech inspects and explains the problem ($89, waived with repair)"
+                icon: "clipboard-check"
+                duration: "30-45 minutes"
+
+              - step_number: 3
+                title: "Upfront Pricing"
+                description: "We give you exact costs before starting any work"
+                icon: "calculator"
+                duration: "5 minutes"
+
+              - step_number: 4
+                title: "Your Approval"
+                description: "You decide if you want us to proceed. No obligation."
+                icon: "hand-thumbs-up"
+                duration: "Your timeline"
+
+              - step_number: 5
+                title: "Repair Work"
+                description: "We fix it right the first time using quality parts"
+                icon: "tools"
+                duration: "1-3 hours typical"
+
+              - step_number: 6
+                title: "Test & Verify"
+                description: "We test, clean up, and confirm everything's working before we leave"
+                icon: "check-circle"
+                duration: "15 minutes"
+
+            classes_container: ["list-group", "list-group-flush"]
+
+            meclabs_contribution:
+              increases: ["value_prop_3x"]
+              reduces: ["friction_2x", "anxiety_2x"]
+
+        - type: GUARANTEE_CHIPS
+          column: {xs: 12, lg: 4}
+          order: {xs: 2, lg: 2}
+          content:
+            title: "Our Guarantees"
+            chips:
+              - text: "No repair = No charge"
+                description: "If we can't fix it, you pay nothing"
+                icon: "shield-check"
+                classes: ["badge", "rounded-pill", "bg-success", "p-3", "mb-2", "w-100"]
+
+              - text: "90-day warranty"
+                description: "All repairs warrantied for 90 days"
+                icon: "calendar-check"
+                classes: ["badge", "rounded-pill", "bg-success", "p-3", "mb-2", "w-100"]
+
+              - text: "Price lock guarantee"
+                description: "Quote price is your final price"
+                icon: "lock"
+                classes: ["badge", "rounded-pill", "bg-success", "p-3", "mb-2", "w-100"]
+
+              - text: "Diagnostic fee credit"
+                description: "$89 waived when you approve repair"
+                icon: "cash-coin"
+                classes: ["badge", "rounded-pill", "bg-success", "p-3", "mb-2", "w-100"]
+
+            display: "pill_stack"
+            classes_container: ["d-flex", "flex-column", "gap-2", "mt-4", "mt-lg-0"]
+
+            meclabs_contribution:
+              reduces: ["anxiety_2x"]
+
+    # ROW 10: TRUST_ROW (CREDENTIALS + TESTIMONIAL)
+    - id: trust
+      container: standard
+      layout: two_column
+      classes: ["py-5", "bg-light", "border-top"]
+      blocks:
+        - type: CREDENTIALS_LICENSES
+          column: {xs: 12, lg: 6}
+          order: {xs: 1, lg: 1}
+          content:
+            title: "Licensed & Certified"
+            licenses:
+              - number: "TACLB00024715E"
+                type: "Texas HVAC License"
+                icon: "award"
+
+              - number: "EPA Certified"
+                type: "Refrigerant Handling"
+                icon: "award"
+
+            certifications:
+              - "NATE Certified Technicians"
+              - "BBB A+ Rating"
+              - "Insured & Bonded"
+              - "Background-checked techs"
+
+            classes_licenses: ["list-unstyled", "mb-3"]
+            classes_certs: ["list-unstyled", "mb-0"]
+
+            meclabs_contribution:
+              reduces: ["anxiety_2x"]
+
+        - type: TESTIMONIAL
+          column: {xs: 12, lg: 6}
+          order: {xs: 2, lg: 2}
+          content:
+            quote: |
+              Furnace died during the February freeze. They came within 2 hours and had
+              us warm again by dinner. The tech explained everything and didn't upsell us.
+              Price was exactly what they quoted on the phone.
+
+            attribution:
+              author: "Jennifer L."
+              location: "McKinney"
+              date: "February 2024"
+              rating: 5
+              source: "Google Review"
+
+            classes_card: ["card", "border-0", "shadow-sm", "h-100"]
+            classes_body: ["card-body"]
+
+            meclabs_contribution:
+              increases: ["motivation_4x"]
+              reduces: ["anxiety_2x"]
+
+    # ROW 11: OPS_ROW (COVERAGE_HOURS + AFTER_HOURS)
+    - id: operations
+      container: standard
+      layout: two_column
+      classes: ["py-4", "border-top"]
+      blocks:
+        - type: COVERAGE_HOURS
+          column: {xs: 12, lg: 6}
+          order: {xs: 1, lg: 1}
+          content:
+            title: "Service Hours"
+            regular: "7am-8pm Mon-Sat"
+            emergency: "24/7 for no-heat emergencies"
+            current_status: "Open Now"
+            timezone: "Central Time"
+            classes_status: ["badge", "bg-success", "mb-2"]
+
+        - type: AFTER_HOURS
+          column: {xs: 12, lg: 6}
+          order: {xs: 2, lg: 2}
+          content:
+            title: "After-Hours Emergency Service"
+            text: "No heat emergency? We're on-call 24/7 with no extra charge for evening service until 8pm"
+            premium_hours: "After 8pm: +$50 emergency fee"
+            cta:
+              text: "Call Emergency Line"
+              href: "tel:9725551234"
+              classes: ["btn", "btn-danger", "mt-2"]
+
+    # ROW 12: PRIMARY_CTAS
+    - id: cta_mid
+      container: standard
+      layout: single_column
+      classes: ["py-5", "text-center", "bg-primary", "text-white"]
+      blocks:
+        - type: PRIMARY_CTAS
+          column: {xs: 12}
+          content:
+            heading: "Ready to Get Your Heater Fixed?"
+            subtext: "Call now or schedule online. Most repairs done same day"
+            buttons:
+              - text: "Call (972) 555-1234"
+                href: "tel:9725551234"
+                classes: ["btn", "btn-light", "btn-lg", "me-3"]
+
+              - text: "Request Service"
+                href: "#form"
+                classes: ["btn", "btn-outline-light", "btn-lg"]
+
+            classes_buttons: ["d-flex", "justify-content-center", "flex-wrap", "gap-3", "mt-3"]
+
+    # ROW 13: FAQ
+    - id: faq
+      container: standard
+      layout: single_column
+      classes: ["py-5"]
+      max_width: "800px"
+      blocks:
+        - type: FAQ
+          column: {xs: 12}
+          content:
+            title: "Common Questions"
+            intro_text: |
+              We know choosing a contractor brings up questions. Here are the most common
+              concerns we hear, answered honestly.
+
+            questions:
+              - question: "How much does heater repair cost?"
+                answer: |
+                  Most repairs $200-800. We charge $89 diagnostic (waived with repair) and
+                  give exact pricing before starting work. If we can't fix it, you pay nothing.
+                intent_category: "price"
+
+              - question: "Should I repair my 12-year-old heater?"
+                answer: |
+                  Depends on repair cost. Under $500? Usually worth it. Over $1,000? Might
+                  replace. We'll walk you through the math with no pressure either way.
+                intent_category: "trust"
+
+              - question: "How fast can you get here?"
+                answer: |
+                  Most McKinney calls: 2-4 hours. We dispatch the closest available tech and
+                  call ahead with ETA. For true emergencies (no heat, gas smell), we prioritize
+                  same-day service.
+                intent_category: "speed"
+
+              - question: "Do you charge extra for nights/weekends?"
+                answer: |
+                  No extra charge until 8pm. After 8pm: $50 emergency fee. Weekends are standard
+                  rates. We believe you shouldn't be penalized for heating emergencies.
+                intent_category: "price"
+
+              - question: "What if I need a new system instead of repair?"
+                answer: |
+                  We'll explain your options honestly. If replacement makes more sense, we'll show
+                  you why with the numbers. Many repairs ARE worth it. We're not here to upsell.
+                intent_category: "trust"
+
+              - question: "Are your technicians licensed?"
+                answer: |
+                  Yes. Every tech is licensed by the state of Texas (TACLB00024715E), background-checked,
+                  and EPA certified for refrigerant handling. You'll see their license and photo ID.
+                intent_category: "trust"
+
+              - question: "What brands do you work on?"
+                answer: |
+                  All major brands: Carrier, Trane, Lennox, Rheem, Goodman, American Standard,
+                  Bryant, York, and more. Our techs carry common parts for most systems.
+                intent_category: "capability"
+
+              - question: "Do you offer financing?"
+                answer: |
+                  Yes. 0% financing for 12 months on approved credit for repairs over $500. We accept
+                  all major credit cards, checks, and cash.
+                intent_category: "price"
+
+            accordion: true
+            classes_accordion: ["accordion"]
+
+            meclabs_contribution:
+              reduces: ["friction_2x", "anxiety_2x"]
+
+    # ROW 14: FINAL_CTA
+    - id: final_cta
+      container: fluid
+      layout: single_column
+      classes: ["py-5", "bg-danger", "text-white", "text-center"]
+      blocks:
+        - type: FINAL_CTA
+          column: {xs: 12}
+          content:
+            heading: "Get Your Heater Fixed Today"
+            subheading: "Licensed technicians • Same-day service • Upfront pricing"
+            buttons:
+              - text: "Call (972) 555-1234"
+                href: "tel:9725551234"
+                classes: ["btn", "btn-light", "btn-lg", "me-3"]
+
+              - text: "Request Service Online"
+                href: "#form"
+                classes: ["btn", "btn-outline-light", "btn-lg"]
+
+            trust_reinforcement: "Serving McKinney & North Texas since 1987 • TACLB00024715E"
+            classes_buttons: ["d-flex", "justify-content-center", "flex-wrap", "gap-3", "mt-4"]
+            classes_trust: ["small", "mt-3", "text-white-50"]
+
+  # FLOATING ELEMENTS
+  sticky_cta:
+    enabled: true
+    display_breakpoint: "d-lg-none"
+    classes: ["fixed-bottom", "bg-white", "p-3", "shadow", "border-top"]
+    buttons:
+      - text: "Call Now"
+        href: "tel:9725551234"
+        classes: ["btn", "btn-danger", "w-100", "mb-2"]
+
+      - text: "Text Us"
+        href: "sms:9725551234"
+        classes: ["btn", "btn-outline-danger", "w-100"]

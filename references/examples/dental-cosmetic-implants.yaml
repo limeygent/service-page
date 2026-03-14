@@ -1,0 +1,584 @@
+# Complete Service Page Example: Dental Implants
+# Scenario: Research intent, high consideration, cosmetic/restorative
+# Niche: Dental | Intent: research | Urgency: planning
+
+page:
+  meta:
+    title: "Dental Implants Frisco TX | Natural-Looking Tooth Replacement"
+    description: "Dental implants in Frisco. Board-certified implant dentist. Free consultation. Insurance accepted. Restore your smile with permanent tooth replacement."
+    niche: dental
+    intent_primary: research
+    urgency: planning
+    audience_role: patient
+    location:
+      city: Frisco
+      state: TX
+      region: Dallas-Fort Worth
+    business:
+      name: Lakeside Family Dentistry
+      founded_year: 2005
+      phone: "(469) 555-6789"
+
+  rows:
+    # ROW 1: HERO (text-focused, no urgent form)
+    - id: hero
+      container: standard
+      layout: single_column
+      classes: ["py-5", "bg-gradient-light", "text-center"]
+      blocks:
+        - type: HERO
+          column: {xs: 12}
+          content:
+            heading: "Dental Implants in Frisco, TX"
+            subhead: "Permanent, natural-looking tooth replacement from a board-certified implant dentist"
+            explanation_text: |
+              Missing teeth affect more than your smile. They impact confidence, eating, and
+              long-term oral health. Our implant process is designed for comfort, with clear
+              pricing and support at every step from consultation to final restoration.
+
+            intent_mapping:
+              emotional_driver: "Loss of confidence, uncertainty about process"
+              functional_driver: "Understand procedure, compare options, cost planning"
+              trust_signal: "Board-certified, experienced, comprehensive care"
+
+            badges:
+              - text: "Board Certified"
+                icon: "award"
+                classes: ["badge", "bg-primary", "p-3"]
+              - text: "18 Years Experience"
+                icon: "calendar-check"
+                classes: ["badge", "bg-primary", "p-3"]
+              - text: "1,200+ Implants Placed"
+                icon: "check-circle"
+                classes: ["badge", "bg-primary", "p-3"]
+
+            ctas:
+              - text: "Schedule Free Consultation"
+                href: "#scheduler"
+                classes: ["btn", "btn-primary", "btn-lg"]
+              - text: "Call (469) 555-6789"
+                href: "tel:4695556789"
+                classes: ["btn", "btn-outline-primary", "btn-lg"]
+
+            image:
+              display: true
+              type: "Before/after smile transformation"
+              position: "below_ctas"
+              lazy: false
+              alt: "Dental implant before and after results"
+
+            meclabs_contribution:
+              increases: ["motivation_4x", "value_prop_3x"]
+              reduces: ["friction_2x"]
+
+    # ROW 2: PATH_CHOICE (Implant options)
+    - id: implant_options
+      container: standard
+      layout: single_column
+      classes: ["py-5"]
+      blocks:
+        - type: PATH_CHOICE
+          column: {xs: 12}
+          content:
+            title: "Which Implant Option Is Right for You?"
+            intro: "We'll help you understand the options and choose what's best for your situation"
+
+            option_1:
+              title: "Single Tooth Implant"
+              best_for: "Replacing one missing tooth"
+              process: "Implant post + custom crown"
+              cost: "$3,000-4,500"
+              timeline: "4-6 months total"
+              pros:
+                - "Looks and functions like natural tooth"
+                - "Doesn't affect adjacent teeth"
+                - "Prevents bone loss"
+                - "Lasts 20+ years with care"
+              classes_card: ["col-12", "col-lg-4", "mb-4", "mb-lg-0"]
+
+            option_2:
+              title: "Implant Bridge"
+              best_for: "Replacing 2-4 adjacent teeth"
+              process: "2 implants + bridge spanning gap"
+              cost: "$5,000-8,000"
+              timeline: "4-6 months"
+              pros:
+                - "More affordable than individual implants"
+                - "Stable and permanent"
+                - "Preserves bone in implant areas"
+                - "No removal needed"
+              classes_card: ["col-12", "col-lg-4", "mb-4", "mb-lg-0"]
+
+            option_3:
+              title: "All-on-4 / Full Arch"
+              best_for: "Replacing all teeth in upper or lower jaw"
+              process: "4 implants support full arch of teeth"
+              cost: "$15,000-25,000 per arch"
+              timeline: "6-8 months"
+              pros:
+                - "Complete smile restoration"
+                - "Eat normally again"
+                - "Prevents facial collapse"
+                - "No denture adhesives"
+              classes_card: ["col-12", "col-lg-4"]
+
+            decision_support:
+              text: "Not sure which option you need? Your free consultation includes 3D imaging and a personalized treatment plan."
+              classes: ["alert", "alert-info", "mt-4"]
+
+            layout_classes: ["row"]
+
+            meclabs_contribution:
+              increases: ["value_prop_3x"]
+              reduces: ["anxiety_2x", "friction_2x"]
+
+    # ROW 3: PROCESS_TIMELINE
+    - id: process
+      container: standard
+      layout: single_column
+      classes: ["py-5", "bg-light"]
+      blocks:
+        - type: PROCESS_TIMELINE
+          column: {xs: 12}
+          content:
+            title: "Your Implant Journey: What to Expect"
+            intro_text: |
+              The dental implant process takes several months but results in a permanent,
+              natural solution. Here's exactly what happens at each stage.
+
+            intent_mapping:
+              emotional_driver: "Fear of unknown, anxiety about pain/time"
+              functional_driver: "Understand timeline, prepare for appointments"
+
+            steps:
+              - step_number: 1
+                title: "Free Consultation"
+                description: "Comprehensive exam, 3D CT scan, discuss goals and concerns"
+                what_happens: "We evaluate bone quality, discuss options, answer all questions"
+                pain_level: "None"
+                duration: "60 minutes"
+                cost: "Free"
+                icon: "chat-quote"
+
+              - step_number: 2
+                title: "Treatment Planning"
+                description: "Custom implant plan, exact costs, financing arranged"
+                what_happens: "Digital planning, insurance verification, schedule surgery"
+                pain_level: "None"
+                duration: "30 minutes (or done same-day as consult)"
+                cost: "Included"
+                icon: "file-medical"
+
+              - step_number: 3
+                title: "Implant Placement Surgery"
+                description: "Titanium post placed into jawbone under local anesthesia"
+                what_happens: "Numbing ensures comfort. Post placed precisely using guided surgery."
+                pain_level: "Minimal (numbed)"
+                duration: "1-2 hours"
+                cost: "$1,500-2,500 per implant"
+                recovery: "2-3 days mild discomfort, back to work next day"
+                icon: "heart-pulse"
+
+              - step_number: 4
+                title: "Healing Period"
+                description: "Implant integrates with bone (osseointegration)"
+                what_happens: "Bone grows around implant. We provide temporary tooth for front teeth."
+                pain_level: "None after first week"
+                duration: "3-6 months"
+                cost: "No additional cost"
+                icon: "hourglass-split"
+
+              - step_number: 5
+                title: "Abutment Placement"
+                description: "Connector piece attached to implant"
+                what_happens: "Quick procedure to attach abutment (healing cap)"
+                pain_level: "Minimal"
+                duration: "30 minutes"
+                cost: "$300-500"
+                recovery: "1-2 days"
+                icon: "puzzle"
+
+              - step_number: 6
+                title: "Crown Fabrication"
+                description: "Custom crown designed and created"
+                what_happens: "Digital impressions, color matching, crown crafted in lab"
+                pain_level: "None"
+                duration: "2 weeks"
+                cost: "$1,000-1,500"
+                icon: "tooth"
+
+              - step_number: 7
+                title: "Final Restoration"
+                description: "Crown permanently attached"
+                what_happens: "Crown secured, bite adjusted, care instructions provided"
+                pain_level: "None"
+                duration: "1 hour"
+                cost: "Included in crown cost"
+                icon: "check-circle-fill"
+
+              - step_number: 8
+                title: "Ongoing Care"
+                description: "Regular cleanings and checkups"
+                what_happens: "Monitor implant health, professional cleaning"
+                pain_level: "None"
+                duration: "Every 6 months"
+                cost: "Standard cleaning fee"
+                icon: "calendar-check"
+
+            classes_container: ["timeline", "position-relative"]
+
+            meclabs_contribution:
+              increases: ["value_prop_3x"]
+              reduces: ["friction_2x", "anxiety_2x"]
+
+    # ROW 4: PRICING_TABLE
+    - id: pricing
+      container: standard
+      layout: single_column
+      classes: ["py-5"]
+      blocks:
+        - type: PRICING_TABLE
+          column: {xs: 12}
+          content:
+            title: "Transparent Implant Pricing"
+            intro_text: |
+              We believe you should know what to expect before you commit. Here's our complete
+              pricing breakdown. We'll verify your insurance and discuss financing options
+              during your free consultation.
+
+            intent_mapping:
+              emotional_driver: "Fear of surprise costs, affordability concerns"
+              functional_driver: "Budget planning, insurance coordination"
+
+            consultation_fee:
+              amount: "Free"
+              includes: "Comprehensive exam, 3D CT scan, treatment plan, cost estimate"
+              value: "$300 value"
+
+            pricing_breakdown:
+              - component: "Consultation & Planning"
+                cost: "Free"
+                insurance_coverage: "Not typically covered"
+                payment_plan: "N/A"
+
+              - component: "Implant Surgery (per implant)"
+                cost: "$1,500-2,500"
+                insurance_coverage: "50% if you have implant coverage"
+                payment_plan: "Yes"
+
+              - component: "Abutment"
+                cost: "$300-500"
+                insurance_coverage: "50% typically"
+                payment_plan: "Yes"
+
+              - component: "Crown"
+                cost: "$1,000-1,500"
+                insurance_coverage: "50% (like any crown)"
+                payment_plan: "Yes"
+
+              - component: "Total Single Implant"
+                cost: "$3,000-4,500"
+                insurance_coverage: "Varies by plan"
+                payment_plan: "0% for 12 months"
+
+            insurance_info:
+              title: "Insurance & Financing"
+              details:
+                - "We accept all major dental insurance"
+                - "We'll verify your benefits and file claims"
+                - "Most plans cover 50% of implant components"
+                - "0% financing for 12-24 months (OAC)"
+                - "CareCredit and LendingClub accepted"
+
+            footer_note: |
+              Exact costs determined after consultation and 3D imaging. Pricing includes all
+              appointments, follow-ups, and adjustments. Additional procedures (bone grafting,
+              sinus lift) may be needed and would be discussed before treatment.
+
+            classes_table: ["table", "table-bordered"]
+
+            meclabs_contribution:
+              increases: ["value_prop_3x"]
+              reduces: ["friction_2x", "anxiety_2x"]
+
+    # ROW 5: INSURANCE + PAYMENT_STRIP
+    - id: payment
+      container: standard
+      layout: two_column
+      classes: ["py-4", "bg-light", "border-top", "border-bottom"]
+      blocks:
+        - type: INSURANCE
+          column: {xs: 12, lg: 6}
+          content:
+            title: "We Work With Your Insurance"
+            text: "We're in-network with major carriers and will file all claims for you"
+            providers:
+              - Delta Dental
+              - Cigna
+              - Aetna
+              - MetLife
+              - Guardian
+              - Humana
+            process: "We verify benefits, maximize coverage, and handle all paperwork"
+            classes_logos: ["d-flex", "flex-wrap", "gap-3", "mt-3"]
+
+        - type: PAYMENT_STRIP
+          column: {xs: 12, lg: 6}
+          content:
+            title: "Flexible Financing Options"
+            accepted: ["Visa", "Mastercard", "Amex", "Discover", "Check", "HSA/FSA"]
+            financing:
+              available: true
+              terms: "0% interest for 12-24 months (OAC)"
+              providers: ["CareCredit", "LendingClub"]
+              link: "#financing"
+              link_text: "Apply now"
+            display: "stacked"
+            classes: ["mt-3", "mt-lg-0"]
+
+    # ROW 6: CREDENTIALS + TESTIMONIAL
+    - id: trust
+      container: standard
+      layout: two_column
+      classes: ["py-5"]
+      blocks:
+        - type: CREDENTIALS_LICENSES
+          column: {xs: 12, lg: 5}
+          content:
+            title: "Dr. Sarah Chen, DDS"
+            subtitle: "Board Certified in Implant Dentistry"
+            credentials:
+              - "Doctor of Dental Surgery - Baylor College of Dentistry"
+              - "Fellowship in Implant Dentistry - NYU"
+              - "Board Certified - American Board of Oral Implantology"
+              - "Member - American Academy of Implant Dentistry"
+              - "1,200+ implants placed since 2005"
+            image:
+              src: "/images/dr-chen.jpg"
+              alt: "Dr. Sarah Chen"
+              classes: ["rounded-circle", "mb-3"]
+            classes_list: ["list-unstyled"]
+
+            meclabs_contribution:
+              reduces: ["anxiety_2x"]
+
+        - type: TESTIMONIAL
+          column: {xs: 12, lg: 7}
+          content:
+            quotes:
+              - quote: |
+                  I was so nervous about implants. Dr. Chen walked me through everything,
+                  answered my thousand questions, and made me feel completely at ease. The
+                  procedure was way easier than I expected, and my new tooth looks completely
+                  natural. I smile confidently now.
+                attribution:
+                  author: "Michael R."
+                  age: 52
+                  location: "Frisco"
+                  procedure: "Single implant (front tooth)"
+                  date: "March 2024"
+                  rating: 5
+
+              - quote: |
+                  After losing several back teeth, I couldn't eat properly. Dr. Chen suggested
+                  an implant bridge and explained exactly what to expect. Six months later, I
+                  can eat anything again. Worth every penny.
+                attribution:
+                  author: "Linda M."
+                  age: 67
+                  location: "McKinney"
+                  procedure: "3-unit implant bridge"
+                  date: "January 2024"
+                  rating: 5
+
+            display: "carousel"
+            classes_card: ["card", "border-0", "shadow-sm", "h-100"]
+
+            meclabs_contribution:
+              increases: ["motivation_4x"]
+              reduces: ["anxiety_2x"]
+
+    # ROW 7: FAQ (extensive)
+    - id: faq
+      container: standard
+      layout: single_column
+      classes: ["py-5", "bg-light"]
+      max_width: "900px"
+      blocks:
+        - type: FAQ
+          column: {xs: 12}
+          content:
+            title: "Your Implant Questions Answered"
+            intro_text: |
+              We've answered hundreds of implant questions over 18 years. Here are the most
+              common concerns we hear.
+
+            questions:
+              - question: "Do dental implants hurt?"
+                answer: |
+                  Most patients report less discomfort than a tooth extraction. You're fully numbed
+                  during the procedure. Afterward, mild soreness for 2-3 days is normal and manageable
+                  with over-the-counter pain medication. Many patients return to work the next day.
+                intent_category: "anxiety"
+
+              - question: "How long do implants last?"
+                answer: |
+                  With proper care, implants can last 20-30+ years or even a lifetime. The titanium
+                  post integrates permanently with bone. The crown typically lasts 10-15 years and
+                  can be replaced if needed without affecting the implant.
+                intent_category: "value"
+
+              - question: "Am I too old for implants?"
+                answer: |
+                  Age isn't a factor. Bone quality and overall health matter more. We've successfully
+                  placed implants in patients in their 80s. If you're healthy enough for a tooth
+                  extraction, you're likely healthy enough for an implant.
+                intent_category: "eligibility"
+
+              - question: "What if I don't have enough bone?"
+                answer: |
+                  We often can build bone using grafting procedures. Your free consultation includes
+                  3D imaging that shows exactly how much bone you have. If grafting is needed, we'll
+                  explain the process and adjust your timeline and costs accordingly.
+                intent_category: "eligibility"
+
+              - question: "How much of the cost does insurance cover?"
+                answer: |
+                  Coverage varies by plan. Many plans now cover 50% of implant components (same as
+                  crowns and bridges). We'll verify your specific benefits during consultation and
+                  maximize whatever coverage you have.
+                intent_category: "cost"
+
+              - question: "Can I get all my teeth done at once?"
+                answer: |
+                  Yes, with All-on-4 or similar full arch solutions. Four to six implants per arch
+                  can support a full set of teeth. Some patients can even get temporary teeth the
+                  same day as implant surgery, so you're never without teeth.
+                intent_category: "process"
+
+              - question: "What's the difference between implants and dentures?"
+                answer: |
+                  Implants are permanent and feel like your natural teeth. You brush them normally
+                  and never remove them. Dentures sit on your gums, require adhesives, and need
+                  removal for cleaning. Implants prevent bone loss; dentures don't. Implants cost
+                  more upfront but last much longer.
+                intent_category: "comparison"
+
+              - question: "Will people be able to tell I have an implant?"
+                answer: |
+                  No. We color-match your crown to your natural teeth and shape it to match perfectly.
+                  Even dentists can't tell without X-rays. Your implant will look, feel, and function
+                  exactly like a natural tooth.
+                intent_category: "appearance"
+
+              - question: "What's the success rate?"
+                answer: |
+                  Dental implants have a 95-98% success rate, making them one of the most successful
+                  dental procedures. Failure usually occurs in the first few months if bone doesn't
+                  integrate, and we replace failed implants at no charge during your warranty period.
+                intent_category: "trust"
+
+              - question: "How do I care for my implant?"
+                answer: |
+                  Brush and floss exactly like natural teeth. See us every 6 months for checkups
+                  and professional cleaning. Avoid smoking (reduces success rate) and wear a nightguard
+                  if you grind your teeth. That's it, no special products or procedures needed.
+                intent_category: "maintenance"
+
+              - question: "Can I eat normally with implants?"
+                answer: |
+                  Yes. Once healed, you can eat anything you could with natural teeth: steak, apples,
+                  corn on the cob, crunchy foods. Unlike dentures, there are no food restrictions
+                  with implants.
+                intent_category: "function"
+
+              - question: "What happens during the free consultation?"
+                answer: |
+                  We'll examine your mouth, take 3D images to evaluate bone quality, discuss your
+                  goals and concerns, explain your options, and provide exact costs and timeline.
+                  It takes about an hour and there's absolutely no pressure to proceed. Many patients
+                  go home to think about it.
+                intent_category: "process"
+
+            accordion: true
+            classes_accordion: ["accordion", "accordion-flush"]
+
+            meclabs_contribution:
+              reduces: ["friction_2x", "anxiety_2x"]
+
+    # ROW 8: SCHEDULER
+    - id: schedule
+      container: standard
+      layout: single_column
+      classes: ["py-5"]
+      blocks:
+        - type: SCHEDULER
+          column: {xs: 12}
+          content:
+            title: "Schedule Your Free Consultation"
+            intro: "Choose a convenient time for your implant consultation. No charge, no obligation."
+            embed_type: "calendly"
+            embed_url: "https://calendly.com/lakeside-dental/implant-consult"
+            options:
+              - type: "in-person"
+                label: "In-Person Consultation"
+                duration: "60 minutes"
+                includes: "Exam, 3D imaging, treatment plan"
+              - type: "virtual"
+                label: "Virtual Consultation"
+                duration: "30 minutes"
+                includes: "Video call, preliminary questions"
+            classes_container: ["card", "shadow-sm", "p-4"]
+
+            privacy_adjacent: true
+
+            meclabs_contribution:
+              reduces: ["friction_2x"]
+
+    # ROW 9: PRIMARY_CTAS
+    - id: cta_mid
+      container: standard
+      layout: single_column
+      classes: ["py-5", "text-center", "bg-primary", "text-white"]
+      blocks:
+        - type: PRIMARY_CTAS
+          column: {xs: 12}
+          content:
+            heading: "Ready to Restore Your Smile?"
+            subtext: "Free consultation • Flexible financing • Expert care since 2005"
+            buttons:
+              - text: "Schedule Consultation"
+                href: "#schedule"
+                classes: ["btn", "btn-light", "btn-lg"]
+              - text: "Call (469) 555-6789"
+                href: "tel:4695556789"
+                classes: ["btn", "btn-outline-light", "btn-lg"]
+
+            classes_buttons: ["d-flex", "justify-content-center", "flex-wrap", "gap-3", "mt-3"]
+
+    # ROW 10: FINAL_CTA
+    - id: final_cta
+      container: fluid
+      layout: single_column
+      classes: ["py-5", "bg-gradient-primary", "text-white", "text-center"]
+      blocks:
+        - type: FINAL_CTA
+          column: {xs: 12}
+          content:
+            heading: "Start Your Implant Journey Today"
+            subheading: "Free consultation • 0% financing available • 1,200+ successful implants"
+            buttons:
+              - text: "Schedule Free Consultation"
+                href: "#schedule"
+                classes: ["btn", "btn-light", "btn-lg"]
+              - text: "Call (469) 555-6789"
+                href: "tel:4695556789"
+                classes: ["btn", "btn-outline-light", "btn-lg"]
+
+            trust_reinforcement: "Serving Frisco & North Dallas since 2005 • Board Certified Implant Dentist"
+            classes_buttons: ["d-flex", "justify-content-center", "flex-wrap", "gap-3", "mt-4"]
+            classes_trust: ["small", "mt-3", "text-white-50"]
+
+  # NO STICKY CTA for research intent
+  sticky_cta:
+    enabled: false
