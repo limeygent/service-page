@@ -31,10 +31,13 @@ For comprehensive page generation, collect additional parameters from input-para
 #### Step 1a: Load Client Profile (if available)
 
 Check for a client profile at `~/.claude/config/clients/{slug}/`:
-- `profile.json` for business name, city, niche, brand color, phone
+- `profile.json` for business name, city, niche, brand color, phone, providers
 - `background.md` for comprehensive business knowledge (services, team, differentiators)
+- `page-templates/*.json` for pre-defined block selections and ordering per service type
 
 If a client profile exists, auto-populate business_profile fields and skip redundant questions.
+
+**Page templates shortcut:** If a matching page template exists (e.g., `sick-visit.json` for ear infections/strep/flu, `preventive.json` for well-child visits), use it to skip Step 2 entirely. The template provides the block list, order, modifiers, and per-block notes. When `skip_block_index: true`, go straight to Step 3 using the template's block list instead of reading block-catalog.md.
 
 #### Step 1c: City Research (WebSearch)
 
@@ -57,22 +60,15 @@ After collecting niche and urgency, set 4 modifiers (auto-detected from niche, c
 
 See `references/input-parameters.md` → "Page-Level Modifiers" for full schema.
 
-### Step 2: Block Selection
+### Step 2: Block Selection and Ordering
 
-Evaluate each block's WHEN condition against collected inputs + page-level modifiers:
+Read block-catalog.md (the slim index). It contains WHEN conditions and ordering rules for all blocks.
 
-```
-IF safety_hazard_possible == true OR (niche == 'hvac' AND outage_severity == 'no_heat')
-  → Include SAFETY_NOTICE
+1. Evaluate each block's WHEN condition against collected inputs + page-level modifiers
+2. Select 10-15 blocks appropriate for this niche/urgency/intent
+3. Order them using the priority-based sequencing and decision tree in the index
 
-IF 'price' in top_objections OR niche in ['hvac','plumbing','roofing','dental']
-  → Include PRICING_TABLE
-
-IF review_count >= 20 AND avg_rating >= 4.5
-  → Include REVIEWS_SNAPSHOT
-```
-
-See references/block-catalog.md for complete conditional logic per block.
+Do NOT read individual block detail files yet. Selection and ordering uses only the index.
 
 ### Step 3: Layout Generation
 
@@ -87,10 +83,22 @@ Generate Bootstrap 5 row structure with responsive column definitions.
 
 ### Step 4: Content Population
 
-For each block, generate content using:
+For each selected block in order, read its detailed spec from `references/blocks/{block-name}.md`, then generate content using:
+- **Block spec** - Follow the content model, layout, and MECLABS tags from the block file
 - **Intent mapping** - Address emotional/functional drivers (see intent-methodology.md)
 - **MECLABS principles** - Optimize for motivation, value prop, incentive while reducing friction/anxiety (see meclabs-principles.md)
 - **Copy templates** - Use niche-specific language patterns (see references/content-templates.md)
+
+Read each block file only when you're ready to write that section. Do not pre-read all block files.
+
+#### Step 4a: Per-Block SEO Checklist
+
+Before writing each section, answer these 5 questions:
+1. **What question does this section answer?** The H2 and first sentence should satisfy that query as a standalone passage.
+2. **What's the one thing here a competitor page won't have?** Local data, quantified claims, practitioner-specific detail, or actionable specifics.
+3. **Which named entities belong in this section?** Doctor names, hospitals, license numbers, school districts, neighborhoods. At least one per section where natural.
+4. **Is there a list, table, or comparison that makes this scannable?** Front-load key info, use structured content for multi-item data.
+5. **Can the first sentence stand alone as a featured snippet answer?** Write it as if Google will pull just that sentence.
 
 #### Step 4b: Apply Anti-Slop Content Rules
 
@@ -113,6 +121,8 @@ Create complete Bootstrap 5 HTML or YAML page structure. Include:
 - Intent mapping metadata for each block
 - MECLABS contribution tags
 - Image placeholders where appropriate
+
+**Always write the output to a file.** Never return the full HTML/YAML in your response text. Save it to the specified output path (or `output/` by default), then return only a brief summary of what was built (sections, block count, key compliance notes). This keeps context usage efficient when running as a subagent.
 
 ## Critical Rules
 
@@ -264,16 +274,16 @@ Default to YAML structure unless user requests HTML.
 
 ## Reference Files
 
-Load these as needed during execution:
+Load these during execution. Read each file **once only** (do not re-read files you have already loaded):
 
 - **input-parameters.md** - Complete input schema with defaults
-- **block-catalog.md** - All blocks with conditional logic and content models
+- **block-catalog.md** - All blocks with conditional logic and content models (large file: read in full, do not re-read)
 - **references/layout-schema.md** - Bootstrap grid system and responsive rules
 - **intent-methodology.md** - Three-layer intent analysis from intent-analyzer skill
 - **meclabs-principles.md** - Conversion optimization formula
 - **references/content-templates.md** - Copy patterns and examples per niche
 - **niche-adaptations.md** - Industry-specific requirements
-- **references/emergency-page-patterns.md** - 🚨 Emergency service page architecture (MUST READ for urgency='emergency')
+- **references/emergency-page-patterns.md** - Emergency service page architecture. **ONLY read this file if urgency is 'emergency'. Skip entirely for 'soon' or 'planning' urgency.**
 
 ## HTML Skeleton
 

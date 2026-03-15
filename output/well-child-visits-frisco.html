@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Well-Child Visits Frisco, TX | Entirely Kids Pediatrics</title>
+  <meta name="description" content="Board-certified pediatricians in Frisco, TX providing AAP-recommended well-child visits from newborn through age 18. Same-doctor continuity, developmental screening, vaccinations, and sports physicals.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+</head>
+<body>
+
+<style>
+  :root {
+    --brand-primary: #85c341;
+    --brand-primary-dark: #6ba332;
+    --brand-primary-light: rgba(133, 195, 65, 0.1);
+    --brand-accent: #2c7a3f;
+    --brand-dark: #1a2e0f;
+    --brand-light: #f4fae9;
+  }
+  .btn-brand { background: var(--brand-primary); border-color: var(--brand-primary); color: #fff; font-weight: 600; }
+  .btn-brand:hover { background: var(--brand-primary-dark); color: #fff; transform: translateY(-1px); box-shadow: 0 4px 8px rgba(0,0,0,0.15); }
+  .btn-brand-outline { border: 2px solid var(--brand-primary); color: var(--brand-primary-dark); font-weight: 600; background: transparent; }
+  .btn-brand-outline:hover { background: var(--brand-primary); color: #fff; }
+  .zone-group { scroll-margin-top: 80px; }
+  .step-number { width: 40px; height: 40px; border-radius: 50%; background: var(--brand-primary); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+  .card-hover { transition: transform 0.2s, box-shadow 0.2s; border: none; }
+  .card-hover:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+  .sticky-cta-mobile { position: fixed; bottom: 0; left: 0; right: 0; z-index: 1050; background: #fff; box-shadow: 0 -4px 12px rgba(0,0,0,0.1); }
+  @media (min-width: 992px) { .sticky-cta-mobile { display: none !important; } }
+  .age-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin: 3px 2px; }
+  .milestone-card { border-left: 4px solid var(--brand-primary); }
+  .provider-card img { width: 100%; max-width: 280px; height: auto; border-radius: 12px; }
+  .check-list li { padding: 6px 0; }
+  .check-list li::before { content: "\F26A"; font-family: "bootstrap-icons"; color: var(--brand-primary); margin-right: 8px; font-weight: 700; }
+  .check-list { list-style: none; padding-left: 0; }
+</style>
+
+<!-- HERO -->
+<section id="hero" class="zone-group py-5" style="background: linear-gradient(135deg, var(--brand-light) 0%, #e8f5d6 100%);">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-12 col-lg-7">
+        <span class="badge rounded-pill px-3 py-2 mb-3" style="background: var(--brand-primary-light); color: var(--brand-primary-dark);">
+          <i class="bi bi-calendar-check me-1"></i> Accepting New Patients in Frisco
+        </span>
+        <h1 class="display-5 fw-bold mb-3" style="color: var(--brand-dark);">Well-Child Visits in Frisco, TX</h1>
+        <p class="lead mb-3" style="color: #4a5568;">Board-certified pediatricians tracking your child's growth, development, and vaccinations from newborn through age 18.</p>
+        <p class="mb-4" style="color: #4a5568;">
+          Choosing a pediatrician means choosing who will know your child year after year. At Entirely Kids Pediatrics, your child sees the same board-certified doctor at every visit, so nothing gets missed and your child builds a real relationship with their physician. We follow the AAP-recommended schedule of 12 well-child visits before age 3, then annual checkups through age 18.
+        </p>
+        <div class="d-flex flex-column flex-sm-row gap-3 mb-3">
+          <a href="tel:4694253600" class="btn btn-brand btn-lg px-4">
+            <i class="bi bi-telephone-fill me-2"></i>Call (469) 425-3600
+          </a>
+          <a href="#schedule" class="btn btn-brand-outline btn-lg px-4">
+            <i class="bi bi-calendar3 me-2"></i>View Visit Schedule
+          </a>
+        </div>
+        <div class="d-flex flex-wrap gap-3 mt-3">
+          <span class="text-muted small"><i class="bi bi-shield-check me-1" style="color: var(--brand-primary);"></i> Same-Doctor Continuity</span>
+          <span class="text-muted small"><i class="bi bi-translate me-1" style="color: var(--brand-primary);"></i> English, Cantonese, Mandarin</span>
+          <span class="text-muted small"><i class="bi bi-laptop me-1" style="color: var(--brand-primary);"></i> Telemedicine Follow-Ups</span>
+        </div>
+      </div>
+      <div class="col-12 col-lg-5">
+        <div class="card shadow border-0 rounded-4">
+          <div class="card-body p-4">
+            <h2 class="h5 fw-bold mb-3 text-center" style="color: var(--brand-dark);">Schedule a Well-Child Visit</h2>
+            <p class="small text-muted text-center mb-3">Most insurance plans cover preventive well-child visits at 100% with no copay.</p>
+            <form>
+              <div class="mb-3">
+                <label for="parentName" class="form-label small fw-semibold">Parent's Name</label>
+                <input type="text" class="form-control form-control-lg" id="parentName" placeholder="Your name">
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label small fw-semibold">Phone Number</label>
+                <input type="tel" class="form-control form-control-lg" id="phone" placeholder="(469) 555-0000">
+              </div>
+              <div class="mb-3">
+                <label for="childAge" class="form-label small fw-semibold">Child's Age</label>
+                <select class="form-select form-select-lg" id="childAge">
+                  <option value="">Select age range</option>
+                  <option>Newborn (0-1 month)</option>
+                  <option>Infant (1-12 months)</option>
+                  <option>Toddler (1-3 years)</option>
+                  <option>Preschool (3-5 years)</option>
+                  <option>School-Age (5-12 years)</option>
+                  <option>Teenager (13-18 years)</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="visitType" class="form-label small fw-semibold">Visit Type</label>
+                <select class="form-select form-select-lg" id="visitType">
+                  <option value="">Select visit type</option>
+                  <option>Well-Child Checkup</option>
+                  <option>Newborn Visit</option>
+                  <option>Sports Physical</option>
+                  <option>School Forms / Immunization Review</option>
+                  <option>New Patient Consultation</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-brand w-100 btn-lg">Request Appointment</button>
+              <p class="text-muted small text-center mt-2 mb-0">We will call you within 1 business day to confirm.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WELL-CHILD VISIT SCHEDULE -->
+<section id="schedule" class="zone-group py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-2">AAP-Recommended Well-Child Visit Schedule</h2>
+    <p class="text-muted mb-4">The American Academy of Pediatrics recommends specific checkup intervals to catch developmental, growth, and health concerns early. Here is the full schedule we follow at Entirely Kids Pediatrics.</p>
+
+    <div class="row g-4">
+      <!-- Newborn / Infant -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm rounded-3 milestone-card">
+          <div class="card-body">
+            <h3 class="h5 fw-bold mb-2"><i class="bi bi-emoji-smile me-2" style="color: var(--brand-primary);"></i>Newborn &amp; Infant</h3>
+            <p class="small text-muted mb-2">7 visits in the first year</p>
+            <div class="mb-3">
+              <span class="age-badge bg-light">3-5 days</span>
+              <span class="age-badge bg-light">1 month</span>
+              <span class="age-badge bg-light">2 months</span>
+              <span class="age-badge bg-light">4 months</span>
+              <span class="age-badge bg-light">6 months</span>
+              <span class="age-badge bg-light">9 months</span>
+              <span class="age-badge bg-light">12 months</span>
+            </div>
+            <p class="small mb-0"><strong>Focus areas:</strong> Weight/length tracking, feeding assessment, newborn screening follow-up, hearing check, hip exam, immunizations (DTaP, IPV, Hep B, Hib, PCV13, rotavirus), and postpartum parent wellness check-in.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toddler -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm rounded-3 milestone-card">
+          <div class="card-body">
+            <h3 class="h5 fw-bold mb-2"><i class="bi bi-person-arms-up me-2" style="color: var(--brand-primary);"></i>Toddler</h3>
+            <p class="small text-muted mb-2">5 visits from ages 1-3</p>
+            <div class="mb-3">
+              <span class="age-badge bg-light">15 months</span>
+              <span class="age-badge bg-light">18 months</span>
+              <span class="age-badge bg-light">24 months</span>
+              <span class="age-badge bg-light">30 months</span>
+              <span class="age-badge bg-light">3 years</span>
+            </div>
+            <p class="small mb-0"><strong>Focus areas:</strong> Autism screening (M-CHAT at 18 and 24 months), speech/language milestones, walking/motor development, lead screening, dental referral, immunizations (MMR, varicella, Hep A), and behavioral assessment.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- School-Age & Adolescent -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm rounded-3 milestone-card">
+          <div class="card-body">
+            <h3 class="h5 fw-bold mb-2"><i class="bi bi-backpack me-2" style="color: var(--brand-primary);"></i>School-Age &amp; Teen</h3>
+            <p class="small text-muted mb-2">Annual visits from ages 4-18</p>
+            <div class="mb-3">
+              <span class="age-badge bg-light">4 years</span>
+              <span class="age-badge bg-light">5 years</span>
+              <span class="age-badge bg-light">6-10 (yearly)</span>
+              <span class="age-badge bg-light">11-18 (yearly)</span>
+            </div>
+            <p class="small mb-0"><strong>Focus areas:</strong> Vision/hearing screening, BMI tracking, scoliosis check, adolescent Tdap and HPV vaccines (age 11-12), meningococcal vaccine, depression/anxiety screening (PHQ-A), sports physicals, and school immunization compliance for FISD and Texas DSHS requirements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4 p-3 rounded-3" style="background: var(--brand-primary-light);">
+      <p class="mb-0 small"><i class="bi bi-info-circle me-2" style="color: var(--brand-primary);"></i><strong>Insurance note:</strong> Under the Affordable Care Act, most health plans cover well-child visits and recommended immunizations at 100% with no copay when you use an in-network provider. We verify your benefits before your visit so there are no surprises.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT HAPPENS AT A WELL-CHILD VISIT (PROCESS TIMELINE) -->
+<section id="process" class="zone-group py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold mb-2">What Happens at a Well-Child Visit</h2>
+    <p class="text-muted mb-4">A typical well-child visit lasts 20-30 minutes. Here is what to expect at each appointment.</p>
+
+    <div class="row g-4">
+      <div class="col-12 col-lg-8">
+        <div class="d-flex mb-4">
+          <span class="step-number me-3">1</span>
+          <div>
+            <h3 class="h6 fw-bold mb-1">Growth Measurements</h3>
+            <p class="text-muted small mb-0">We measure height, weight, and head circumference (for infants), then plot them on age-appropriate growth charts. For children age 2 and older, we calculate BMI percentile to identify any nutritional concerns early.</p>
+          </div>
+        </div>
+        <div class="d-flex mb-4">
+          <span class="step-number me-3">2</span>
+          <div>
+            <h3 class="h6 fw-bold mb-1">Developmental Milestone Review</h3>
+            <p class="text-muted small mb-0">Your doctor reviews your child's speech, motor skills, social behavior, and cognitive development using validated screening tools. This includes the M-CHAT autism screening at 18 and 24 months, and the PHQ-A depression screen for adolescents.</p>
+          </div>
+        </div>
+        <div class="d-flex mb-4">
+          <span class="step-number me-3">3</span>
+          <div>
+            <h3 class="h6 fw-bold mb-1">Physical Examination</h3>
+            <p class="text-muted small mb-0">A thorough head-to-toe exam checks eyes, ears, heart, lungs, abdomen, skin, and musculoskeletal system. Vision screening begins at age 3, hearing screening at age 4, and scoliosis checks start at age 10.</p>
+          </div>
+        </div>
+        <div class="d-flex mb-4">
+          <span class="step-number me-3">4</span>
+          <div>
+            <h3 class="h6 fw-bold mb-1">Vaccinations</h3>
+            <p class="text-muted small mb-0">We administer age-appropriate immunizations per the CDC schedule. We explain each vaccine, discuss any concerns you have, and provide the Vaccine Information Statement (VIS) for every shot. Texas DSHS requires specific vaccines for school and daycare enrollment.</p>
+          </div>
+        </div>
+        <div class="d-flex mb-4">
+          <span class="step-number me-3">5</span>
+          <div>
+            <h3 class="h6 fw-bold mb-1">Anticipatory Guidance</h3>
+            <p class="text-muted small mb-0">Your doctor discusses age-specific topics: safe sleep for infants, nutrition and picky eating for toddlers, screen time guidelines, puberty preparation, and mental health for teens. This is also the time to ask any questions on your mind.</p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <span class="step-number me-3">6</span>
+          <div>
+            <h3 class="h6 fw-bold mb-1">School &amp; Sports Forms</h3>
+            <p class="text-muted small mb-0">We complete all required forms during the visit: Texas DSHS immunization records, Frisco ISD enrollment health forms, UIL sports physical clearance (valid for 1 calendar year), and daycare/camp medical forms. No separate appointment needed.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="card border-0 shadow-sm rounded-3">
+          <div class="card-body p-4">
+            <h3 class="h6 fw-bold mb-3"><i class="bi bi-check-circle me-2" style="color: var(--brand-primary);"></i>What to Bring</h3>
+            <ul class="check-list small">
+              <li>Insurance card</li>
+              <li>Photo ID (parent/guardian)</li>
+              <li>Previous immunization records (new patients)</li>
+              <li>School or sports forms to be completed</li>
+              <li>List of questions or concerns</li>
+              <li>Child's current medications (if any)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card border-0 shadow-sm rounded-3 mt-3">
+          <div class="card-body p-4">
+            <h3 class="h6 fw-bold mb-3"><i class="bi bi-clock me-2" style="color: var(--brand-primary);"></i>Visit Duration</h3>
+            <ul class="list-unstyled small mb-0">
+              <li class="mb-2"><strong>Newborn visit:</strong> 30-40 minutes</li>
+              <li class="mb-2"><strong>Infant/toddler:</strong> 25-30 minutes</li>
+              <li class="mb-2"><strong>School-age:</strong> 20-25 minutes</li>
+              <li><strong>Adolescent:</strong> 25-30 minutes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MID-CTA -->
+<section class="zone-group py-4" style="background: var(--brand-primary);">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-8 text-white">
+        <h2 class="h4 fw-bold mb-1">Your child sees the same doctor, every visit.</h2>
+        <p class="mb-0 opacity-75">Continuity of care means Dr. Leung or Dr. Cheng knows your child's full history, personality, and health patterns.</p>
+      </div>
+      <div class="col-12 col-lg-4 text-lg-end mt-3 mt-lg-0">
+        <a href="tel:4694253600" class="btn btn-light btn-lg fw-semibold" style="color: var(--brand-primary-dark);">
+          <i class="bi bi-telephone me-2"></i>Speak with Our Office
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEVELOPMENTAL MILESTONES -->
+<section id="milestones" class="zone-group py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-2">Developmental Milestones We Track</h2>
+    <p class="text-muted mb-4">Every well-child visit includes a developmental assessment. Here are the key milestones we evaluate at each stage, so you know what your doctor is looking for and what questions to ask.</p>
+
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm rounded-3 card-hover">
+          <div class="card-body">
+            <div class="mb-2"><i class="bi bi-emoji-heart-eyes fs-3" style="color: var(--brand-primary);"></i></div>
+            <h3 class="h6 fw-bold">0-12 Months</h3>
+            <ul class="small text-muted ps-3 mb-0">
+              <li>Lifts head, rolls over, sits up</li>
+              <li>Reaches for objects, transfers hand to hand</li>
+              <li>Babbles, responds to name</li>
+              <li>Social smile, stranger awareness</li>
+              <li>First foods introduction (4-6 months)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm rounded-3 card-hover">
+          <div class="card-body">
+            <div class="mb-2"><i class="bi bi-person-walking fs-3" style="color: var(--brand-primary);"></i></div>
+            <h3 class="h6 fw-bold">1-3 Years</h3>
+            <ul class="small text-muted ps-3 mb-0">
+              <li>Walking, running, climbing stairs</li>
+              <li>First words, 2-word phrases by age 2</li>
+              <li>Follows simple directions</li>
+              <li>Parallel play, emerging independence</li>
+              <li>Toilet training readiness signs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm rounded-3 card-hover">
+          <div class="card-body">
+            <div class="mb-2"><i class="bi bi-pencil fs-3" style="color: var(--brand-primary);"></i></div>
+            <h3 class="h6 fw-bold">4-10 Years</h3>
+            <ul class="small text-muted ps-3 mb-0">
+              <li>Writes name, reads age-appropriate text</li>
+              <li>Cooperative play, friendships</li>
+              <li>Follows multi-step instructions</li>
+              <li>Attention span for school tasks</li>
+              <li>Physical coordination for sports</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm rounded-3 card-hover">
+          <div class="card-body">
+            <div class="mb-2"><i class="bi bi-person-badge fs-3" style="color: var(--brand-primary);"></i></div>
+            <h3 class="h6 fw-bold">11-18 Years</h3>
+            <ul class="small text-muted ps-3 mb-0">
+              <li>Puberty stages (Tanner staging)</li>
+              <li>Academic and social adjustment</li>
+              <li>Mental health screening (PHQ-A)</li>
+              <li>Substance use awareness</li>
+              <li>Confidential adolescent time with doctor</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEET THE TEAM -->
+<section id="team" class="zone-group py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold mb-2">Your Child's Doctors</h2>
+    <p class="text-muted mb-4">Both physicians are board-certified by the American Board of Pediatrics and on staff at Baylor Medical Center of Frisco. When you choose a doctor, your child sees that same physician at every visit.</p>
+
+    <div class="row g-4">
+      <div class="col-12 col-lg-6">
+        <div class="card border-0 shadow-sm rounded-3 h-100">
+          <div class="card-body p-4">
+            <h3 class="h5 fw-bold mb-1">Dr. Danielle Leung, MD</h3>
+            <p class="small mb-3" style="color: var(--brand-primary-dark);">Board-Certified Pediatrician</p>
+            <ul class="small text-muted ps-3 mb-3">
+              <li>Residency trained at UT Southwestern Medical Center (Dallas)</li>
+              <li>Specialties: acute illness management, allergy management, newborn care</li>
+              <li>Languages: English, Cantonese</li>
+              <li>Hospital affiliation: Baylor Medical Center of Frisco</li>
+            </ul>
+            <p class="small text-muted mb-0">Dr. Leung's UT Southwestern training means she trained at one of the top pediatric programs in Texas, right here in the DFW area. She has particular depth in managing allergies, a common concern for Frisco families dealing with North Texas cedar, ragweed, and grass pollen seasons.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="card border-0 shadow-sm rounded-3 h-100">
+          <div class="card-body p-4">
+            <h3 class="h5 fw-bold mb-1">Dr. Karen Cheng, MD</h3>
+            <p class="small mb-3" style="color: var(--brand-primary-dark);">Board-Certified Pediatrician</p>
+            <ul class="small text-muted ps-3 mb-3">
+              <li>Board-certified by the American Board of Pediatrics</li>
+              <li>Specialties: ear, nose, and throat concerns, developmental screening</li>
+              <li>Languages: English, Mandarin</li>
+              <li>Hospital affiliation: Baylor Medical Center of Frisco</li>
+            </ul>
+            <p class="small text-muted mb-0">Dr. Cheng's focus on developmental screening makes her a strong fit for families who want thorough milestone tracking at every well-child visit. Her ENT expertise is especially relevant given that ear infections are the number one reason for pediatric sick visits in North Texas daycares and preschools.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+          <span class="badge rounded-pill px-3 py-2 fs-6" style="background: var(--brand-primary-light); color: var(--brand-primary-dark);">
+            <i class="bi bi-patch-check me-1"></i> American Board of Pediatrics Certified
+          </span>
+          <span class="badge rounded-pill px-3 py-2 fs-6" style="background: var(--brand-primary-light); color: var(--brand-primary-dark);">
+            <i class="bi bi-hospital me-1"></i> Baylor Medical Center of Frisco
+          </span>
+          <span class="badge rounded-pill px-3 py-2 fs-6" style="background: var(--brand-primary-light); color: var(--brand-primary-dark);">
+            <i class="bi bi-translate me-1"></i> English, Cantonese, Mandarin
+          </span>
+          <span class="badge rounded-pill px-3 py-2 fs-6" style="background: var(--brand-primary-light); color: var(--brand-primary-dark);">
+            <i class="bi bi-camera-video me-1"></i> Telemedicine Available
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCAL KNOWLEDGE -->
+<section id="local" class="zone-group py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-2">Pediatric Care Designed for Frisco Families</h2>
+    <p class="text-muted mb-4">Frisco is one of the fastest-growing cities in North Texas, with a population over 230,000 and a median age under 35. That means a lot of young families navigating well-child visits, school enrollment requirements, and sports physicals for the first time.</p>
+
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm rounded-3">
+          <div class="card-body p-4">
+            <h3 class="h6 fw-bold"><i class="bi bi-building me-2" style="color: var(--brand-primary);"></i>Frisco ISD Requirements</h3>
+            <p class="small text-muted mb-0">Frisco ISD requires up-to-date immunization records for enrollment and an annual health screening. We complete all FISD enrollment forms during your child's well-child visit, including the Texas Certificate of Immunization. For students entering 7th grade, the Tdap and meningococcal vaccines are required by Texas law before the first day of school.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm rounded-3">
+          <div class="card-body p-4">
+            <h3 class="h6 fw-bold"><i class="bi bi-trophy me-2" style="color: var(--brand-primary);"></i>Sports Physicals for FISD Athletics</h3>
+            <p class="small text-muted mb-0">UIL requires a physical exam within the past calendar year for all student athletes. For FISD middle and high school sports (Wakeland, Liberty, Centennial, Lebanon Trail, Heritage, Lone Star, Reedy, Panther Creek, Emerson, and Memorial), we complete the UIL Pre-Participation Physical Evaluation form during any well-child visit or as a standalone appointment. Schedule early: physicals fill up fast in July and August.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm rounded-3">
+          <div class="card-body p-4">
+            <h3 class="h6 fw-bold"><i class="bi bi-virus me-2" style="color: var(--brand-primary);"></i>North Texas Seasonal Health</h3>
+            <p class="small text-muted mb-0">Frisco's DFW climate means specific seasonal health patterns: cedar/mountain juniper pollen (December through February), ragweed (August through November), grass pollen (April through June), RSV season peaking in fall, and flu season November through March. We adjust our screening and guidance to match what Frisco kids are actually experiencing each season.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-0">
+      <div class="col-12 col-lg-6">
+        <div class="card border-0 shadow-sm rounded-3">
+          <div class="card-body p-4">
+            <h3 class="h6 fw-bold"><i class="bi bi-file-earmark-medical me-2" style="color: var(--brand-primary);"></i>Texas DSHS Immunization Requirements</h3>
+            <p class="small text-muted mb-2">The Texas Department of State Health Services (DSHS) mandates specific immunizations for school and daycare attendance. Required vaccines include:</p>
+            <div class="row">
+              <div class="col-6">
+                <ul class="small text-muted ps-3 mb-0">
+                  <li>DTaP/Tdap (5 doses)</li>
+                  <li>Polio/IPV (4 doses)</li>
+                  <li>MMR (2 doses)</li>
+                  <li>Hepatitis B (3 doses)</li>
+                  <li>Varicella (2 doses)</li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="small text-muted ps-3 mb-0">
+                  <li>Hepatitis A (2 doses)</li>
+                  <li>Meningococcal (ages 11-12)</li>
+                  <li>Tdap booster (7th grade)</li>
+                </ul>
+              </div>
+            </div>
+            <p class="small text-muted mt-2 mb-0">We track your child's immunization record against DSHS requirements and flag any gaps before they become a school enrollment issue.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="card border-0 shadow-sm rounded-3">
+          <div class="card-body p-4">
+            <h3 class="h6 fw-bold"><i class="bi bi-geo-alt me-2" style="color: var(--brand-primary);"></i>Serving Frisco and Surrounding Areas</h3>
+            <p class="small text-muted mb-2">We see families from across the North Texas corridor:</p>
+            <div class="d-flex flex-wrap gap-2 mb-2">
+              <span class="badge bg-light text-dark">Frisco (75033, 75034, 75035)</span>
+              <span class="badge bg-light text-dark">Plano</span>
+              <span class="badge bg-light text-dark">McKinney</span>
+              <span class="badge bg-light text-dark">Prosper</span>
+              <span class="badge bg-light text-dark">Little Elm</span>
+              <span class="badge bg-light text-dark">The Colony</span>
+              <span class="badge bg-light text-dark">Allen</span>
+              <span class="badge bg-light text-dark">Celina</span>
+            </div>
+            <p class="small text-muted mb-0">Located near the intersection of the Dallas North Tollway and Warren Parkway corridor in Frisco. Baylor Medical Center of Frisco is just minutes away for any referrals or after-hours needs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSURANCE -->
+<section id="insurance" class="zone-group py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold mb-2">Insurance and Payment</h2>
+    <p class="text-muted mb-4">Well-child visits are classified as preventive care. Under the ACA, most insurance plans cover these visits at 100% when you use an in-network provider.</p>
+
+    <div class="row g-4">
+      <div class="col-12 col-lg-8">
+        <div class="card border-0 shadow-sm rounded-3">
+          <div class="card-body p-4">
+            <h3 class="h6 fw-bold mb-3">What's Typically Covered at No Cost</h3>
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <ul class="check-list small">
+                  <li>Annual well-child exam</li>
+                  <li>Growth and developmental screening</li>
+                  <li>Vision and hearing screening</li>
+                  <li>Immunizations on the CDC schedule</li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-6">
+                <ul class="check-list small">
+                  <li>BMI and blood pressure check</li>
+                  <li>Depression and behavioral screening</li>
+                  <li>Lead and anemia testing (age-appropriate)</li>
+                  <li>Anticipatory guidance from your doctor</li>
+                </ul>
+              </div>
+            </div>
+            <p class="small text-muted mt-2 mb-0"><strong>Important:</strong> If a sick visit issue is addressed during a well-child visit (for example, treating an ear infection found during the exam), that portion may generate a separate charge. We always let you know before billing anything beyond the preventive visit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="card border-0 shadow-sm rounded-3 h-100">
+          <div class="card-body p-4">
+            <h3 class="h6 fw-bold mb-3">We Accept</h3>
+            <ul class="list-unstyled small text-muted">
+              <li class="mb-2"><i class="bi bi-check2 me-2" style="color: var(--brand-primary);"></i>Most major insurance plans</li>
+              <li class="mb-2"><i class="bi bi-check2 me-2" style="color: var(--brand-primary);"></i>Blue Cross Blue Shield</li>
+              <li class="mb-2"><i class="bi bi-check2 me-2" style="color: var(--brand-primary);"></i>Aetna</li>
+              <li class="mb-2"><i class="bi bi-check2 me-2" style="color: var(--brand-primary);"></i>Cigna</li>
+              <li class="mb-2"><i class="bi bi-check2 me-2" style="color: var(--brand-primary);"></i>UnitedHealthcare</li>
+              <li class="mb-2"><i class="bi bi-check2 me-2" style="color: var(--brand-primary);"></i>Texas Medicaid / CHIP</li>
+              <li class="mb-2"><i class="bi bi-check2 me-2" style="color: var(--brand-primary);"></i>Self-pay available</li>
+            </ul>
+            <p class="small text-muted mb-0">Call (469) 425-3600 to verify your specific plan before your visit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIMARY CTA (after trust section) -->
+<section class="zone-group py-4" style="background: #f0f9e4;">
+  <div class="container text-center">
+    <h2 class="h4 fw-bold mb-2" style="color: var(--brand-dark);">No obligation, no pressure. Just a conversation about your child's health.</h2>
+    <p class="text-muted mb-3">Call to schedule your child's next well-child visit or ask any questions about what to expect.</p>
+    <a href="tel:4694253600" class="btn btn-brand btn-lg px-5">
+      <i class="bi bi-telephone me-2"></i>Talk to Our Team at (469) 425-3600
+    </a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="zone-group py-5">
+  <div class="container" style="max-width: 800px;">
+    <h2 class="fw-bold mb-4">Frequently Asked Questions About Well-Child Visits</h2>
+
+    <details class="mb-3 border-bottom pb-3">
+      <summary class="fw-semibold" style="cursor: pointer;">How often does my child need a well-child visit?</summary>
+      <div class="mt-2 text-muted small">The AAP recommends 7 visits in the first year (at 3-5 days, 1 month, 2 months, 4 months, 6 months, 9 months, and 12 months), then visits at 15, 18, 24, and 30 months, age 3, and then annually from age 4 through 18. That totals about 25-27 well-child visits from birth through high school graduation.</div>
+    </details>
+
+    <details class="mb-3 border-bottom pb-3">
+      <summary class="fw-semibold" style="cursor: pointer;">Will my insurance cover the well-child visit?</summary>
+      <div class="mt-2 text-muted small">Most insurance plans cover well-child visits at 100% as preventive care under the ACA. This includes the exam, immunizations, and standard screenings. If a medical issue is diagnosed and treated during the visit (beyond the scope of the preventive exam), that portion may have a copay. We verify your benefits before your appointment and explain any potential costs upfront.</div>
+    </details>
+
+    <details class="mb-3 border-bottom pb-3">
+      <summary class="fw-semibold" style="cursor: pointer;">Can I get a sports physical at the same time as a well-child visit?</summary>
+      <div class="mt-2 text-muted small">Yes. We complete the UIL Pre-Participation Physical Evaluation form during any well-child visit at no additional charge. The physical is valid for one calendar year. For FISD athletes, we recommend scheduling the well-child visit in the spring or early summer so the physical is valid for the entire upcoming school sports season.</div>
+    </details>
+
+    <details class="mb-3 border-bottom pb-3">
+      <summary class="fw-semibold" style="cursor: pointer;">What if I have questions about vaccines?</summary>
+      <div class="mt-2 text-muted small">We welcome vaccine questions. Dr. Leung and Dr. Cheng take time to explain each recommended vaccine, its purpose, and the evidence behind it. We follow the CDC and AAP immunization schedule and can discuss the reasoning behind any specific vaccine. Texas DSHS requires certain immunizations for school enrollment, and we help you stay in compliance so your child is never held out of class for missing records.</div>
+    </details>
+
+    <details class="mb-3 border-bottom pb-3">
+      <summary class="fw-semibold" style="cursor: pointer;">Will my child see the same doctor every time?</summary>
+      <div class="mt-2 text-muted small">Yes. We follow a same-doctor continuity model. When you choose Dr. Leung or Dr. Cheng as your child's pediatrician, your child sees that same physician at every well-child visit and sick visit. This means your doctor knows your child's full medical history, temperament, and developmental trajectory without starting from scratch each time.</div>
+    </details>
+
+    <details class="mb-3 border-bottom pb-3">
+      <summary class="fw-semibold" style="cursor: pointer;">What school forms can you complete during the visit?</summary>
+      <div class="mt-2 text-muted small">We complete all standard forms during the well-child visit: Texas Certificate of Immunization (required by DSHS for school and daycare enrollment), FISD Student Health History form, UIL sports physical form, daycare medical forms, and camp health forms. Bring any blank forms with you and we will fill them out that day.</div>
+    </details>
+
+    <details class="mb-3 border-bottom pb-3">
+      <summary class="fw-semibold" style="cursor: pointer;">Do you offer telemedicine for follow-ups?</summary>
+      <div class="mt-2 text-muted small">Yes. After an in-person well-child visit, we offer telemedicine follow-ups for non-urgent concerns like reviewing lab results, discussing developmental questions, or checking in on a previously identified issue. The initial well-child exam must be done in-person for accurate growth measurements and physical examination.</div>
+    </details>
+
+    <details class="mb-3 border-bottom pb-3">
+      <summary class="fw-semibold" style="cursor: pointer;">When should I schedule my child's well-child visit?</summary>
+      <div class="mt-2 text-muted small">For infants, visits are scheduled around the AAP-recommended ages (the exact timing matters for vaccine schedules). For school-age children and teens, we recommend scheduling the annual well-child visit in April through June, before the back-to-school rush. This gives you time to catch up on any needed immunizations and complete sports physicals before FISD deadlines. July and August appointments fill quickly.</div>
+    </details>
+
+    <details class="mb-3 border-bottom pb-3">
+      <summary class="fw-semibold" style="cursor: pointer;">What languages do your doctors speak?</summary>
+      <div class="mt-2 text-muted small">Dr. Danielle Leung speaks English and Cantonese. Dr. Karen Cheng speaks English and Mandarin. Frisco has a significant multilingual population, and we want parents to feel comfortable discussing their child's health in their preferred language whenever possible.</div>
+    </details>
+
+    <details class="mb-3 border-bottom pb-3">
+      <summary class="fw-semibold" style="cursor: pointer;">Are you accepting new patients?</summary>
+      <div class="mt-2 text-muted small">Yes. We are currently accepting new patients of all ages, from newborns to 18-year-olds. Call (469) 425-3600 to schedule your child's first visit. We typically schedule new patient appointments within 1-2 weeks.</div>
+    </details>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How often does my child need a well-child visit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The AAP recommends 7 visits in the first year (at 3-5 days, 1 month, 2 months, 4 months, 6 months, 9 months, and 12 months), then visits at 15, 18, 24, and 30 months, age 3, and then annually from age 4 through 18. That totals about 25-27 well-child visits from birth through high school graduation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will my insurance cover the well-child visit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most insurance plans cover well-child visits at 100% as preventive care under the ACA. This includes the exam, immunizations, and standard screenings. If a medical issue is diagnosed and treated during the visit, that portion may have a copay. We verify your benefits before your appointment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get a sports physical at the same time as a well-child visit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We complete the UIL Pre-Participation Physical Evaluation form during any well-child visit at no additional charge. The physical is valid for one calendar year. For FISD athletes, we recommend scheduling in spring or early summer so the physical covers the entire upcoming sports season."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I have questions about vaccines?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We welcome vaccine questions. Dr. Leung and Dr. Cheng take time to explain each recommended vaccine, its purpose, and the evidence behind it. We follow the CDC and AAP immunization schedule. Texas DSHS requires certain immunizations for school enrollment, and we help you stay in compliance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will my child see the same doctor every time?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We follow a same-doctor continuity model. When you choose Dr. Leung or Dr. Cheng as your child's pediatrician, your child sees that same physician at every well-child visit and sick visit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What school forms can you complete during the visit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We complete all standard forms during the well-child visit: Texas Certificate of Immunization, FISD Student Health History form, UIL sports physical form, daycare medical forms, and camp health forms. Bring any blank forms with you and we will fill them out that day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer telemedicine for follow-ups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. After an in-person well-child visit, we offer telemedicine follow-ups for non-urgent concerns like reviewing lab results, discussing developmental questions, or checking in on a previously identified issue."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I schedule my child's well-child visit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For infants, visits are scheduled around the AAP-recommended ages. For school-age children and teens, we recommend scheduling in April through June, before the back-to-school rush. This gives you time to catch up on any needed immunizations and complete sports physicals before FISD deadlines."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What languages do your doctors speak?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dr. Danielle Leung speaks English and Cantonese. Dr. Karen Cheng speaks English and Mandarin."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you accepting new patients?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We are currently accepting new patients of all ages, from newborns to 18-year-olds. Call (469) 425-3600 to schedule your child's first visit. We typically schedule new patient appointments within 1-2 weeks."
+        }
+      }
+    ]
+  }
+  </script>
+</section>
+
+<!-- FINAL CTA -->
+<section id="final-cta" class="zone-group py-5" style="background: linear-gradient(135deg, var(--brand-dark) 0%, #2d4a1a 100%);">
+  <div class="container text-center">
+    <h2 class="fw-bold text-white mb-3">Your Child's Next Checkup Is One Call Away</h2>
+    <p class="text-white opacity-75 mb-4" style="max-width: 600px; margin: 0 auto;">Board-certified pediatricians, same-doctor continuity, and a team that speaks English, Cantonese, and Mandarin. Serving Frisco families near the Dallas North Tollway and Warren Parkway corridor.</p>
+    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+      <a href="tel:4694253600" class="btn btn-brand btn-lg px-5">
+        <i class="bi bi-telephone-fill me-2"></i>Call (469) 425-3600
+      </a>
+      <a href="#hero" class="btn btn-outline-light btn-lg px-5">
+        <i class="bi bi-arrow-up me-2"></i>Back to Top
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta-mobile d-lg-none p-3">
+  <div class="d-flex gap-2">
+    <a href="tel:4694253600" class="btn btn-brand w-50"><i class="bi bi-telephone-fill me-1"></i> Call Now</a>
+    <a href="#hero" class="btn btn-brand-outline w-50"><i class="bi bi-calendar3 me-1"></i> Schedule</a>
+  </div>
+</div>
+
+<!-- Bottom padding for sticky CTA clearance on mobile -->
+<div class="d-lg-none" style="height: 80px;"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
